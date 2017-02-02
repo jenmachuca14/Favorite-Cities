@@ -69,6 +69,10 @@
                                     <constraint firstAttribute="width" constant="46" id="dAu-Oe-JE2"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="4Rx-vX-8tH"/>
+                                    <action selector="onTappedSavedButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="ovB-cO-7sj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,10 +94,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="City Details " id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="cityTextField" destination="BCD-tv-Vph" id="fW4-fZ-0ws"/>
+                        <outlet property="imageView" destination="QX2-CX-09V" id="czM-Nr-QeL"/>
+                        <outlet property="populationTextField" destination="qJU-l8-hTI" id="O6c-wB-WNp"/>
+                        <outlet property="stateTextField" destination="PGq-fd-1XC" id="zsS-CT-rh0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="708" y="128.18590704647679"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -122,11 +132,11 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
