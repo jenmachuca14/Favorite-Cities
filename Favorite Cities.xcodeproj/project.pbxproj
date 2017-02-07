@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0C99121E4A360800A8FDA4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C99111E4A360800A8FDA4 /* Realm.framework */; };
+		3F0C99131E4A360800A8FDA4 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C99111E4A360800A8FDA4 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F0C99161E4A360E00A8FDA4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C99151E4A360E00A8FDA4 /* RealmSwift.framework */; };
+		3F0C99171E4A360E00A8FDA4 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C99151E4A360E00A8FDA4 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F169CAB1E424A2900385BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F169CAA1E424A2900385BA5 /* AppDelegate.swift */; };
 		3F169CAD1E424A2900385BA5 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F169CAC1E424A2900385BA5 /* MasterViewController.swift */; };
 		3F169CAF1E424A2900385BA5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F169CAE1E424A2900385BA5 /* DetailViewController.swift */; };
@@ -35,7 +39,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F0C99141E4A360900A8FDA4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F0C99171E4A360E00A8FDA4 /* RealmSwift.framework in Embed Frameworks */,
+				3F0C99131E4A360800A8FDA4 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3F0C99111E4A360800A8FDA4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3F0C99151E4A360E00A8FDA4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		3F169CA71E424A2900385BA5 /* Favorite Cities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Cities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F169CAA1E424A2900385BA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F169CAC1E424A2900385BA5 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0C99161E4A360E00A8FDA4 /* RealmSwift.framework in Frameworks */,
+				3F0C99121E4A360800A8FDA4 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 		3F169C9E1E424A2900385BA5 = {
 			isa = PBXGroup;
 			children = (
+				3F0C99151E4A360E00A8FDA4 /* RealmSwift.framework */,
+				3F0C99111E4A360800A8FDA4 /* Realm.framework */,
 				3F169CA91E424A2900385BA5 /* Favorite Cities */,
 				3F169CC01E424A2A00385BA5 /* Favorite CitiesTests */,
 				3F169CCB1E424A2A00385BA5 /* Favorite CitiesUITests */,
@@ -141,6 +166,7 @@
 				3F169CA31E424A2900385BA5 /* Sources */,
 				3F169CA41E424A2900385BA5 /* Frameworks */,
 				3F169CA51E424A2900385BA5 /* Resources */,
+				3F0C99141E4A360900A8FDA4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +446,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Favorite Cities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JM.Favorite-Cities";
@@ -432,6 +462,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Favorite Cities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JM.Favorite-Cities";
@@ -513,6 +547,7 @@
 				3F169CD31E424A2A00385BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F169CD41E424A2A00385BA5 /* Build configuration list for PBXNativeTarget "Favorite CitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +556,7 @@
 				3F169CD61E424A2A00385BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F169CD71E424A2A00385BA5 /* Build configuration list for PBXNativeTarget "Favorite CitiesUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +565,7 @@
 				3F169CD91E424A2A00385BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

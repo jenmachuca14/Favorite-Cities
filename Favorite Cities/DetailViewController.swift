@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var populationTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    let realm = try! Realm()
     var detailItem: City? {
         didSet {
             // Update the view.
@@ -35,7 +36,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let city = self.detailItem {
-            if cityTextField.text != nil{
+            if cityTextField != nil{
                 cityTextField.text = city.name
                 stateTextField.text = city.state
                 populationTextField.text = String(city.population)
@@ -47,10 +48,15 @@ class DetailViewController: UIViewController {
     }
     @IBAction func onTappedSavedButton(_ sender: UIButton) {
         if let city = self.detailItem {
-            city.name = cityTextField.text!
-            city.state = stateTextField.text!
-            city.population = Int(populationTextField.text!)!
-            city.image = UIImagePNGRepresentation(imageView.image!)!
+            try! realm.write({
+                
+                city.name = cityTextField.text!
+                city.state = stateTextField.text!
+                city.population = Int(populationTextField.text!)!
+                city.image = UIImagePNGRepresentation(imageView.image!)!
+                
+            })
+            
             
             /// you wanna store the image as a data object// 
            

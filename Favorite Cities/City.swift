@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
-class City: NSObject {
+class City: Object {
     
-    var name = String ()
-    var state = String ()
-    var population = Int()
-    var image = Data ()
+    dynamic var name = String ()
+    dynamic var state = String ()
+    dynamic var population = Int()
+    dynamic var image = Data()
     
     convenience init(name: String, state: String, population: Int, image: Data) {
         self.init()
@@ -24,5 +25,7 @@ class City: NSObject {
         
         // a city object represents one city, then we can set the city,state,population, image would be the flag// 
     }
+    
+    // dynamic is a part of the Realm thing and it is saying to the code that " variables that are gonna change, but keep track of them in the data base"
 
 }
